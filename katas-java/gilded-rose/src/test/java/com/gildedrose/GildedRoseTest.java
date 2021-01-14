@@ -3,7 +3,6 @@ package com.gildedrose;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.stream.Stream;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -120,10 +119,10 @@ class GildedRoseTest {
   private static Stream<Arguments> backstagePassesTestCases() {
 
     return Stream.of(
-      Arguments.of(11, 5, 10, 6),
-      Arguments.of(10, 5, 9, 7),
-      Arguments.of(5, 5, 4, 8),
-      Arguments.of(0, 5, -1, 0)
+      Arguments.of(11, 5, 10, 6), //Increases in Quality as it's SellIn value approaches
+      Arguments.of(10, 5, 9, 7), // Quality increases by 2 when there are 10 days or less
+      Arguments.of(5, 5, 4, 8), // By 3 when there are 5 days or less
+      Arguments.of(0, 5, -1, 0) // Quality drops to 0 after the concert
     );
   }
 
