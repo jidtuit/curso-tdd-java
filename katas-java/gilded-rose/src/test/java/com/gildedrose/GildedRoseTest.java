@@ -121,6 +121,7 @@ class GildedRoseTest {
     return Stream.of(
       Arguments.of(11, 5, 10, 6), //Increases in Quality as it's SellIn value approaches
       Arguments.of(10, 5, 9, 7), // Quality increases by 2 when there are 10 days or less
+      Arguments.of(6, 5, 5, 7), // Quality increases by 2 when there are 10 days or less
       Arguments.of(5, 5, 4, 8), // By 3 when there are 5 days or less
       Arguments.of(0, 5, -1, 0) // Quality drops to 0 after the concert
     );
