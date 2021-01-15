@@ -1,5 +1,5 @@
 package tirepressuremonitoringsystem;
 
-public interface INotifier {
+public interface Notifier {
   void notify(String str);
 }

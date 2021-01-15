@@ -7,8 +7,8 @@ import tirepressuremonitoringsystem.Alarm;
 
 class AlarmTest {
 
-    private DummySensor sensor;
-    private DummyNotifier notifier;
+    private SensorSpy sensor;
+    private NotifierSpy notifier;
     private Alarm alarm;
 
     @Test
@@ -91,8 +91,8 @@ class AlarmTest {
 
     @BeforeEach
     void setup() {
-        sensor = new DummySensor();
-        notifier = new DummyNotifier();
+        sensor = new SensorSpy();
+        notifier = new NotifierSpy();
         alarm = new Alarm(sensor, notifier);
     }
 

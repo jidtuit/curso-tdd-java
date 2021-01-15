@@ -4,16 +4,16 @@ public class Alarm {
     private final double LowPressureThreshold = 17;
     private final double HighPressureThreshold = 21;
 
-    private final ISensor sensor;
-    private final INotifier notifier;
+    private final Sensor sensor;
+    private final Notifier notifier;
     private boolean alarmOn = false;
 
     public Alarm() {
-        this.sensor = new Sensor();
+        this.sensor = new RealSensor();
         this.notifier = new ConsoleNotifier();
     }
-    
-    public Alarm(ISensor sensor, INotifier notifier) {
+
+    public Alarm(Sensor sensor, Notifier notifier) {
         this.sensor = sensor;
         this.notifier = notifier;
     }

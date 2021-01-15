@@ -1,11 +1,11 @@
 package unit_tests;
 
-import tirepressuremonitoringsystem.INotifier;
+import tirepressuremonitoringsystem.Notifier;
 
-public class DummyNotifier implements INotifier {
+public class NotifierSpy implements Notifier {
 
   private int notified = 0;
-  
+
   @Override
   public void notify(String str) {
     notified++;
@@ -14,7 +14,7 @@ public class DummyNotifier implements INotifier {
   public int getNotified() {
     return notified;
   }
-  
+
   public void reset() {
     notified = 0;
   }

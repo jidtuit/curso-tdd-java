@@ -1,8 +1,8 @@
 package unit_tests;
 
-import tirepressuremonitoringsystem.ISensor;
+import tirepressuremonitoringsystem.Sensor;
 
-public class DummySensor implements ISensor {
+public class SensorSpy implements Sensor {
 
   private double value;
 

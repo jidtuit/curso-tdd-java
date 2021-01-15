@@ -1,6 +1,6 @@
 package tirepressuremonitoringsystem;
 
-public class ConsoleNotifier implements INotifier{
+public class ConsoleNotifier implements Notifier {
 
   @Override
   public void notify(String str) {
