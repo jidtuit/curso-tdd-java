@@ -16,13 +16,13 @@ class GildedRose {
 	public void updateQuality() {
 
 		for (Item item : items) {
-			ItemDecorator itemDecorator = itemDecoratorSelector(item);
+			ItemDecorator itemDecorator = createItemDecorator(item);
 			itemDecorator.updateItem();
 		}
 
 	}
 
-	private ItemDecorator itemDecoratorSelector(Item item) {
+	private ItemDecorator createItemDecorator(Item item) {
 		return switch(item.name) {
 			case "Aged Brie" -> new AgedBrieItemDecorator(item);
 			case "Sulfuras, Hand of Ragnaros" -> new SulfurasItemDecorator(item);
