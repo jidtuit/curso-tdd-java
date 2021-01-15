@@ -20,7 +20,7 @@ public class PasswordValidatorTest {
   })
   void shouldInvalidPasswordWhenPasswordHasLessThan8Chars(String input, boolean expected) {
     // GIVEN
--
+
     // WHEN
     boolean actual = validatePassword(input);
 
@@ -96,7 +96,7 @@ public class PasswordValidatorTest {
   /*
     Alternativas intersantes:
       * Devolver un objeto/enum con la regla que ha fallado.
-      * Lanzar una excepción pq tiene más semántica. 
+      * Lanzar una excepción pq tiene más semántica.
    */
   public boolean validatePassword(String pwd) {
 
